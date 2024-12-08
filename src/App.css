@@ -1,0 +1,261 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Work+Sans:wght@600&display=swap');
+
+/* Base Styles */
+body {
+  font-family: 'PT Sans', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #116DFF;
+}
+
+a:hover {
+  color: #0056D6;
+}
+
+/* Layout */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.section {
+  margin: 4rem 0;
+}
+
+/* Navigation */
+.nav {
+  position: sticky;
+  top: 0;
+  background: #27223E;
+  padding: 0;
+  z-index: 1;
+  left: 0;
+  right: 0;
+}
+
+.nav-brand {
+  color: #f5f5f5;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: 'Work Sans', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  cursor: pointer;
+  color: #f5f5f5;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.nav-link:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+/* Typography */
+.section-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.text-content {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  color: #20303C;
+}
+
+.bullet-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.bullet-list li {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Image Text Sections */
+.image-text-content p {
+  font-size: 1.1rem;
+  margin: 0.25rem 0;
+}
+
+.image-text-title {
+  font-weight: bold;
+}
+
+/* Social Links */
+.social-links-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 500px;
+  gap: 1.5rem;
+}
+
+.social-icon {
+  width: 2rem;
+  height: 2rem;
+  margin: 0;
+  color: #20303C;
+}
+
+.social-icon:hover {
+  color: #333333;
+}
+
+/* Project Cards */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.project-card {
+  display: block;
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.project-card-inner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.project-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(39, 34, 62, 0.9);
+  color: white;
+  padding: 1.5rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-card-overlay {
+  transform: translateY(0);
+}
+
+.project-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.project-card-description {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #27223E;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .about-container {
+    flex-direction: column !important;
+  }
+
+  .about-image {
+    width: 80% !important;
+    align-self: center;
+  }
+
+  .image-text-section {
+    flex-direction: column !important;
+  }
+
+  .image-container {
+    width: 80% !important;
+  }
+
+  .social-links-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .social-icon {
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
