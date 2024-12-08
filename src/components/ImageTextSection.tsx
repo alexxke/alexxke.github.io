@@ -18,8 +18,9 @@ export function ImageTextSection({ image, alt, children, imageOnLeft = true }: I
     }}>
       <div className="image-container" style={{
         flex: '0.5',
-        minHeight: '200px',
-        position: 'relative'
+        height: '200px',
+        position: 'relative',
+        overflow: 'hidden'
       }}>
         <img 
           src={image} 
@@ -27,7 +28,8 @@ export function ImageTextSection({ image, alt, children, imageOnLeft = true }: I
           style={{ 
             width: '100%',
             height: '100%',
-            objectFit: 'cover'
+            objectFit: 'cover',
+            objectPosition: 'center'
           }} 
         />
       </div>
