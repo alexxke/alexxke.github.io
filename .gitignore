@@ -10,3 +10,4 @@ out/
 .npm/
 .eslintcache
 .cache/
+.vite/
